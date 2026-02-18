@@ -1,0 +1,314 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "One Dot Digital marketing agency website with scroll animations",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Build a responsive multi-section marketing site with top navigation, anchored scroll-to sections, and a footer repeating navigation.",
+      "acceptanceCriteria": [
+        "A visitor can access Home, About Us, Services, Testimonials, and Contact Us content via navigation (either separate routes or a single-page with anchored sections).",
+        "Layout is responsive and readable on mobile, tablet, and desktop.",
+        "Navigation includes clear CTAs (e.g., “Contact”/“Get in touch”) that brings the user to the Contact section/page.",
+        "Footer contains navigation links to the same main sections."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "create",
+          "description": "Create the main single-page layout with anchored sections (Home/About/Services/Testimonials/Contact), render the top navigation and footer, and wire in the section components so all content is reachable without additional routes."
+        },
+        {
+          "path": "frontend/src/components/site/TopNav.tsx",
+          "operation": "create",
+          "description": "Implement a responsive top navigation with links that scroll/jump to each section and include a primary CTA to Contact. Use shadcn-ui components (e.g., Button) for consistent styling; verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/site/Footer.tsx",
+          "operation": "create",
+          "description": "Implement a footer that repeats the main navigation links and supports the Contact details area. Use shadcn-ui components where helpful (e.g., Separator/Button variants); verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/lib/scrollToSection.ts",
+          "operation": "create",
+          "description": "Add a small utility to perform accessible anchored scrolling (including optional offset for sticky nav) that is reused by header/footer navigation."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Apply a cohesive One Dot Digital visual theme (colors/typography/spacing) using the uploaded brand image as the primary mark and complementary accents (avoid generic blue+purple gradient default).",
+      "acceptanceCriteria": [
+        "A single, consistent theme is applied across the entire site (buttons, headings, cards, sections).",
+        "The uploaded brand image is used as the brand mark in the header and elsewhere per requirements.",
+        "Typography hierarchy is clear (H1/H2/body) and consistent across sections.",
+        "The theme does not rely on a generic blue+purple gradient as the primary brand look unless it clearly aligns with the uploaded logo styling."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/index.css",
+          "operation": "create",
+          "description": "Create the site’s global Tailwind entry CSS (matching the existing template stack) and define consistent base typography and section spacing tokens/classes used throughout the site."
+        },
+        {
+          "path": "frontend/tailwind.config.js",
+          "operation": "modify",
+          "description": "Extend theme tokens (colors, shadows, typography/spacing utilities) to match a cohesive One Dot Digital look aligned with the uploaded logo styling, avoiding a generic default gradient look."
+        },
+        {
+          "path": "frontend/src/components/site/SectionShell.tsx",
+          "operation": "create",
+          "description": "Create a reusable section wrapper for consistent headings, spacing, and max-width layout across sections. Use shadcn-ui primitives where appropriate (e.g., Separator) for consistent styling; verify the component's usage instructions before implementing."
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Use the uploaded “Add a heading.jpeg” as the logo in the header and as a prominent hero visual with crisp rendering on retina screens.",
+      "acceptanceCriteria": [
+        "Header displays the uploaded logo/brand image and it links back to Home/top of page.",
+        "Homepage hero prominently features the uploaded logo/brand image in a visually balanced way.",
+        "Logo displays without pixelation on common device widths (mobile and desktop)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/public/assets/brand/add-a-heading.jpeg",
+          "operation": "create",
+          "description": "Add the uploaded logo image as a static public asset for use in the header and hero."
+        },
+        {
+          "path": "frontend/src/components/sections/HeroSection.tsx",
+          "operation": "create",
+          "description": "Implement the homepage hero area featuring the logo prominently (with correct sizing and responsive image attributes) and a primary CTA that scrolls to Contact. Use shadcn-ui components (e.g., Button) for CTA styling; verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/site/TopNav.tsx",
+          "operation": "modify",
+          "description": "Render the logo image in the header as the brand mark and make it link to the top/Home section. Use shadcn-ui components for layout/CTA consistency; verify the component's usage instructions before implementing."
+        }
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "summary": "Add mixed scroll-based animations (reveal, subtle parallax, service interactions) with reduced-motion support and smooth performance.",
+      "acceptanceCriteria": [
+        "Home/About sections animate into view on scroll (e.g., fade/slide reveal).",
+        "At least one subtle parallax-like effect is present on scroll (e.g., background/hero element moves slightly).",
+        "Services cards have interaction feedback (hover/focus) and at least one scroll-triggered animation pattern for the Services section.",
+        "Animations respect user reduced-motion preferences (reduced motion disables or minimizes animations).",
+        "No noticeable jank on scroll on a typical laptop/mobile device."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/hooks/usePrefersReducedMotion.ts",
+          "operation": "create",
+          "description": "Add a hook to detect reduced-motion preference and expose a boolean to gate animation behavior across the site."
+        },
+        {
+          "path": "frontend/src/hooks/useInViewReveal.ts",
+          "operation": "create",
+          "description": "Add an IntersectionObserver-based hook for scroll reveal (fade/slide) that respects reduced-motion and supports staggered reveals."
+        },
+        {
+          "path": "frontend/src/hooks/useParallax.ts",
+          "operation": "create",
+          "description": "Add a lightweight parallax hook for subtle scroll-based transforms (gated by reduced-motion) optimized to avoid scroll jank."
+        },
+        {
+          "path": "frontend/src/components/sections/AboutSection.tsx",
+          "operation": "create",
+          "description": "Implement About section reveal animations on scroll using the reveal hook while keeping motion tasteful and performant."
+        },
+        {
+          "path": "frontend/src/components/sections/ServicesSection.tsx",
+          "operation": "create",
+          "description": "Implement Services section with scroll-triggered reveal patterns and card hover/focus interactions; use shadcn-ui card-like components if available for consistent styling; verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/sections/HeroSection.tsx",
+          "operation": "modify",
+          "description": "Add a subtle parallax-like movement to a hero background/graphic element using the parallax hook, respecting reduced-motion."
+        },
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Add global motion-safe/motion-reduce class patterns and reusable animation utility classes (or Tailwind-based classes) used by reveal and hover interactions."
+        }
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "summary": "Implement the About Us section with the provided “Who Are We?” copy in a polished, visually distinct layout.",
+      "acceptanceCriteria": [
+        "The About Us section/page includes the “Who Are We?” heading and the provided paragraph copy.",
+        "Copy is presented without typos introduced by implementation.",
+        "About content is visually distinct from other sections (spacing/background/layout)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/sections/AboutSection.tsx",
+          "operation": "modify",
+          "description": "Add the exact “Who Are We?” heading and provided paragraph copy, presented in a split/polished layout with distinct section styling."
+        },
+        {
+          "path": "frontend/src/components/site/SectionShell.tsx",
+          "operation": "modify",
+          "description": "Support About-specific layout variants (e.g., split layout) and consistent heading hierarchy. Use shadcn-ui primitives where appropriate; verify the component's usage instructions before implementing."
+        }
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "summary": "Implement the Services section with all 7 services and their exact descriptions and “Includes” sublists in a responsive card/grid layout.",
+      "acceptanceCriteria": [
+        "All 7 services are present: Performance Marketing, SEO Services, Social Media Marketing (SMM), Website Development, Graphic Designing, Branding & Awareness, Content Writing.",
+        "Each service shows its description and an “Includes” list with the provided items.",
+        "Services are presented in a responsive grid/cards layout (1 column on mobile, multiple on larger screens).",
+        "Each service card has a clear title and readable body text."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/content/services.ts",
+          "operation": "create",
+          "description": "Add a typed, static data source containing all 7 services with exact names, descriptions, and “Includes” lists (static content only; no CMS)."
+        },
+        {
+          "path": "frontend/src/components/sections/ServicesSection.tsx",
+          "operation": "modify",
+          "description": "Render the 7 services from the static content file in a responsive grid of cards with clear titles, descriptions, and Includes lists. Use shadcn-ui components (e.g., Card/Badge/Button variants) for consistent styling; verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/site/ServiceIcon.tsx",
+          "operation": "create",
+          "description": "Create a small component that maps each service to an icon from the provided local sprite asset for consistent service-card visuals."
+        }
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "summary": "Implement a responsive Testimonials section showing all provided testimonials with name and business/descriptor in a carousel or grid.",
+      "acceptanceCriteria": [
+        "All provided testimonials appear on the site with the quoted text preserved.",
+        "Each testimonial clearly shows the author name and the associated business/descriptor.",
+        "Testimonials layout is responsive and maintains consistent spacing/typography."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/content/testimonials.ts",
+          "operation": "create",
+          "description": "Add a typed, static testimonials data source preserving the provided testimonial text, author names, and associated business/descriptors."
+        },
+        {
+          "path": "frontend/src/components/sections/TestimonialsSection.tsx",
+          "operation": "create",
+          "description": "Render testimonials in a responsive carousel or grid with consistent formatting and readable typography. Use shadcn-ui components (e.g., Card/Button) for consistent UI controls; verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wire the Testimonials section into the page flow and ensure navigation can scroll to it."
+        }
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "summary": "Implement Contact section and footer contact details with clickable mailto/tel and Instagram link opening in a new tab using the exact provided details.",
+      "acceptanceCriteria": [
+        "Contact section/page displays: padwanishivani@gmail.com, 8097445826, and the exact Instagram URL provided.",
+        "Footer repeats the same contact details.",
+        "Email link opens the default email client (mailto).",
+        "Phone number link initiates calling on supported devices (tel).",
+        "Instagram link opens in a new tab and is clearly labeled as Instagram."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/content/contact.ts",
+          "operation": "create",
+          "description": "Add a single source of truth for the exact contact details (email, phone, Instagram URL) to prevent accidental modifications."
+        },
+        {
+          "path": "frontend/src/components/sections/ContactSection.tsx",
+          "operation": "create",
+          "description": "Create the Contact section displaying email/phone/Instagram with correct clickable actions (mailto, tel, external link in new tab). Use shadcn-ui components (e.g., Button) for consistent link styling; verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/site/Footer.tsx",
+          "operation": "modify",
+          "description": "Repeat the same contact details in the footer with mailto/tel and Instagram external link behavior. Use shadcn-ui components where helpful; verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wire the Contact section into the page flow and ensure header/footer CTAs scroll to it."
+        }
+      ]
+    },
+    {
+      "id": "REQ-9",
+      "summary": "Add additional marketing-themed imagery beyond the logo using locally stored static assets and integrate them into hero/sections without harming readability.",
+      "acceptanceCriteria": [
+        "At least one additional visual asset (beyond the logo) is used in the hero and/or section dividers/backgrounds.",
+        "All added images are shipped as static assets from the frontend (no backend routes for images).",
+        "Images match the chosen theme and do not reduce text readability (sufficient contrast)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/public/assets/generated/hero-bg.dim_1920x1080.png",
+          "operation": "create",
+          "description": "Add the generated abstract digital marketing hero background static asset for use in the hero."
+        },
+        {
+          "path": "frontend/public/assets/generated/services-icons-sprite.dim_1024x1024.png",
+          "operation": "create",
+          "description": "Add the generated services icons sprite static asset for use in service cards."
+        },
+        {
+          "path": "frontend/public/assets/generated/section-shapes.dim_1600x400.png",
+          "operation": "create",
+          "description": "Add the generated section divider/shape static asset for use between sections."
+        },
+        {
+          "path": "frontend/src/components/sections/HeroSection.tsx",
+          "operation": "modify",
+          "description": "Integrate the static hero background image at frontend/public/assets/generated/hero-bg.dim_1920x1080.png in a way that maintains text contrast/readability and supports parallax when enabled."
+        },
+        {
+          "path": "frontend/src/components/site/SectionDivider.tsx",
+          "operation": "create",
+          "description": "Create a reusable section divider component that uses frontend/public/assets/generated/section-shapes.dim_1600x400.png to support visual transitions between sections."
+        },
+        {
+          "path": "frontend/src/components/sections/ServicesSection.tsx",
+          "operation": "modify",
+          "description": "Use the sprite at frontend/public/assets/generated/services-icons-sprite.dim_1024x1024.png via the ServiceIcon component to add consistent marketing-themed visuals to each service card."
+        }
+      ]
+    },
+    {
+      "id": "REQ-10",
+      "summary": "Add professional on-page polish: consistent headings, clear primary hero CTA to Contact, and a static no-auth experience.",
+      "acceptanceCriteria": [
+        "Each main section has a clear heading and consistent spacing.",
+        "A primary CTA (e.g., “Get in touch”) is visible in the hero and navigates to the Contact section/page.",
+        "No authentication UI is exposed (no sign-in buttons/flows)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Ensure each section has a consistent heading hierarchy and spacing, and that the experience is fully static content (no sign-in buttons/flows surfaced in the UI)."
+        },
+        {
+          "path": "frontend/src/components/sections/HeroSection.tsx",
+          "operation": "modify",
+          "description": "Add/confirm a prominent primary CTA (e.g., “Get in touch”) that scrolls to the Contact section. Use shadcn-ui Button for consistent CTA styling; verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/site/SectionShell.tsx",
+          "operation": "modify",
+          "description": "Standardize section headings and spacing rules so all sections feel cohesive. Use shadcn-ui typography-friendly styling patterns if applicable; verify the component's usage instructions before implementing."
+        }
+      ]
+    }
+  ]
+}

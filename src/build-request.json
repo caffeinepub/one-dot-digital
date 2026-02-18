@@ -1,0 +1,226 @@
+{
+  "kind": "build_request",
+  "title": "One Dot Digital marketing agency website (Home, About, Services, Testimonials, Contact) with scroll animations",
+  "projectName": "One Dot Digital",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Create a responsive multi-section marketing website for the One Dot Digital brand with these primary sections/pages: Home, About Us, Services, Testimonials, and Contact Us, and add a top navigation that can jump/scroll to each section and a footer that repeats the key navigation.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1",
+          "msg-10"
+        ],
+        "quotes": [
+          "Please create a website for One Dot Digital brand which is a Digital marketing agency with home page,about us,services, testimonials,contact us.",
+          "Alright please make the website now"
+        ]
+      },
+      "acceptanceCriteria": [
+        "A visitor can access Home, About Us, Services, Testimonials, and Contact Us content via navigation (either separate routes or a single-page with anchored sections).",
+        "Layout is responsive and readable on mobile, tablet, and desktop.",
+        "Navigation includes clear CTAs (e.g., “Contact”/“Get in touch”) that brings the user to the Contact section/page.",
+        "Footer contains navigation links to the same main sections."
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Implement a cohesive visual theme for One Dot Digital that is consistent across all sections (colors, typography, spacing, component style), using the uploaded brand image as the primary brand mark and choosing complementary accent colors (avoid a default blue+purple gradient look unless it matches the uploaded brand styling).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-3",
+          "msg-5"
+        ],
+        "quotes": [
+          "Color theme you can choose whatever suits best",
+          "Yes use the logo for header or image and branding"
+        ]
+      },
+      "acceptanceCriteria": [
+        "A single, consistent theme is applied across the entire site (buttons, headings, cards, sections).",
+        "The uploaded brand image is used as the brand mark in the header and elsewhere per requirements.",
+        "Typography hierarchy is clear (H1/H2/body) and consistent across sections.",
+        "The theme does not rely on a generic blue+purple gradient as the primary brand look unless it clearly aligns with the uploaded logo styling."
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Use the uploaded image file \"Add a heading.jpeg\" as the One Dot Digital logo/brand visual in the website header and also feature it in the homepage hero area (e.g., as a hero graphic or prominent brand element), ensuring it renders crisply on retina screens.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-5"
+        ],
+        "quotes": [
+          "header as well as hero image and any other related images also works"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Header displays the uploaded logo/brand image and it links back to Home/top of page.",
+        "Homepage hero prominently features the uploaded logo/brand image in a visually balanced way.",
+        "Logo displays without pixelation on common device widths (mobile and desktop)."
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Add mixed scroll-based animations (option D: a mix) to the Home/About and Services areas, combining section reveal (fade/slide), subtle parallax movement, and service-card hover/interactions while keeping performance smooth and motion tasteful.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-3",
+          "msg-4",
+          "msg-5"
+        ],
+        "quotes": [
+          "layout yes I would like some animations for the services part and home page/about us",
+          "I guess for animations can you do something unique with scrolling of the page",
+          "D"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Home/About sections animate into view on scroll (e.g., fade/slide reveal).",
+        "At least one subtle parallax-like effect is present on scroll (e.g., background/hero element moves slightly).",
+        "Services cards have interaction feedback (hover/focus) and at least one scroll-triggered animation pattern for the Services section.",
+        "Animations respect user reduced-motion preferences (reduced motion disables or minimizes animations).",
+        "No noticeable jank on scroll on a typical laptop/mobile device."
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "text": "Implement the About Us content using the provided copy under “Who Are We?” and present it in a polished layout (e.g., split layout with text + visual, and/or values/highlights) while preserving the exact meaning and tone.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Who Are We?\nWe’re the team that transforms your business into a powerful digital identity. At One Dot Digital, we don’t just put you online — we position your brand to grow, scale, and stand out. From strategy to execution, we help businesses accelerate their digital journey with clarity, creativity, and impact."
+        ]
+      },
+      "acceptanceCriteria": [
+        "The About Us section/page includes the “Who Are We?” heading and the provided paragraph copy.",
+        "Copy is presented without typos introduced by implementation.",
+        "About content is visually distinct from other sections (spacing/background/layout)."
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "text": "Implement the Services section with all 7 services and their “Includes” sublists exactly as provided, using a card/grid layout and clear scannability.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Services part-\n1. Performance Marketing\n...\n7. Content Writing\n..."
+        ]
+      },
+      "acceptanceCriteria": [
+        "All 7 services are present: Performance Marketing, SEO Services, Social Media Marketing (SMM), Website Development, Graphic Designing, Branding & Awareness, Content Writing.",
+        "Each service shows its description and an “Includes” list with the provided items.",
+        "Services are presented in a responsive grid/cards layout (1 column on mobile, multiple on larger screens).",
+        "Each service card has a clear title and readable body text."
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "text": "Implement a Testimonials section containing all provided testimonials with the person name and associated business/descriptor, presented in a carousel or grid, ensuring readability and consistent formatting.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Testimony section\nUrmil shah-shasvate diamonds ...\nUma ramnani-skincare by native roots ...\nHritika jhaveri-designer clothing boutique ...\nPurva Adukia- life coach and physiotherapist ...\nAshish- BY clothing brand- ..."
+        ]
+      },
+      "acceptanceCriteria": [
+        "All provided testimonials appear on the site with the quoted text preserved.",
+        "Each testimonial clearly shows the author name and the associated business/descriptor.",
+        "Testimonials layout is responsive and maintains consistent spacing/typography."
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "text": "Implement a Contact Us section/page that displays the provided email, phone number, and Instagram link, and include the same contact details in the website footer with clickable actions (mailto, tel, external link).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1",
+          "msg-2",
+          "msg-5"
+        ],
+        "quotes": [
+          "Contact info page should include email,phone number and social media accounts",
+          "1. Yes contact page as well as footer",
+          "1. Email- padwanishivani@gmail.com\nContact number- 8097445826\nSocial media link is - https://www.instagram.com/one.dotdigital?igsh=MXVvNHB3dW15Z2FmZg%3D%3D&utm_source=qr"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Contact section/page displays: padwanishivani@gmail.com, 8097445826, and the exact Instagram URL provided.",
+        "Footer repeats the same contact details.",
+        "Email link opens the default email client (mailto).",
+        "Phone number link initiates calling on supported devices (tel).",
+        "Instagram link opens in a new tab and is clearly labeled as Instagram."
+      ]
+    },
+    {
+      "id": "REQ-9",
+      "text": "Add relevant, visually consistent marketing-themed imagery beyond the logo (e.g., abstract digital/analytics visuals) to support the hero and section transitions, using locally stored static assets (no backend image serving).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-5"
+        ],
+        "quotes": [
+          "header as well as hero image and any other related images also works"
+        ]
+      },
+      "acceptanceCriteria": [
+        "At least one additional visual asset (beyond the logo) is used in the hero and/or section dividers/backgrounds.",
+        "All added images are shipped as static assets from the frontend (no backend routes for images).",
+        "Images match the chosen theme and do not reduce text readability (sufficient contrast)."
+      ]
+    },
+    {
+      "id": "REQ-10",
+      "text": "Add basic on-page polish for a professional agency site: consistent section headings, clear primary CTA, and a simple loading-free static experience (no Internet Identity or user accounts).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Please create a website for One Dot Digital brand which is a Digital marketing agency..."
+        ]
+      },
+      "acceptanceCriteria": [
+        "Each main section has a clear heading and consistent spacing.",
+        "A primary CTA (e.g., “Get in touch”) is visible in the hero and navigates to the Contact section/page.",
+        "No authentication UI is exposed (no sign-in buttons/flows)."
+      ]
+    }
+  ],
+  "constraints": [
+    "Frontend files under the immutable paths must not be edited directly: frontend/src/hooks/useInternetIdentity.ts, frontend/src/hooks/useInternetIdentity.tsx, frontend/src/hooks/useActor.ts, frontend/src/main.tsx, frontend/src/components/ui.",
+    "Keep the app within the provided stack (React + TypeScript + Tailwind + Shadcn + React Query) and the Internet Computer template constraints.",
+    "Use the exact contact details and Instagram URL provided by the user without modification."
+  ],
+  "nonGoals": [
+    "Implementing a backend CMS or database for editing site content.",
+    "Adding third-party authentication providers (only Internet Identity is supported, but it is not required for this marketing site).",
+    "Building a real-time chat, messaging, or notification system.",
+    "Integrating external marketing APIs (Google Ads/Meta APIs) or analytics dashboards beyond static content."
+  ],
+  "imageRequirements": {
+    "required": [
+      "Abstract digital marketing hero background with subtle grid/analytics motifs (hero-bg.dim_1920x1080.png)",
+      "Set of 7 minimalist service icons in a cohesive style (services-icons-sprite.dim_1024x1024.png)",
+      "Soft geometric section divider/shape graphic (section-shapes.dim_1600x400.png)"
+    ],
+    "edits": []
+  }
+}

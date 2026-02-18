@@ -1,0 +1,23 @@
+{
+  "frontend/src/App.tsx": "Main application component that renders the single-page layout with all sections (Hero, About, Services, Testimonials, Contact) along with TopNav and Footer.",
+  "frontend/src/components/site/TopNav.tsx": "Responsive navigation header with logo, menu links, mobile menu toggle, and scroll-to-section functionality with sticky behavior on scroll.",
+  "frontend/src/components/site/Footer.tsx": "Footer component displaying brand logo, quick navigation links, contact details with clickable actions, and attribution with dynamic year.",
+  "frontend/src/components/sections/HeroSection.tsx": "Hero section featuring the One Dot Digital logo, headline, description, CTAs, and parallax background effect with scroll indicator.",
+  "frontend/src/components/sections/AboutSection.tsx": "About Us section with \"Who Are We?\" content, company description, and three value cards with scroll-reveal animations.",
+  "frontend/src/components/sections/ServicesSection.tsx": "Services section displaying all 7 services in a responsive grid with cards showing title, description, and includes list with scroll-reveal animations.",
+  "frontend/src/components/sections/TestimonialsSection.tsx": "Testimonials section rendering client testimonials in a responsive grid with quote styling and scroll-reveal animations.",
+  "frontend/src/components/sections/ContactSection.tsx": "Contact section displaying email, phone, and Instagram with clickable actions in a card layout with CTA buttons, using Tailwind v3 shrink-0 class.",
+  "frontend/src/components/site/SectionShell.tsx": "Reusable wrapper component providing consistent spacing, scroll offset, and container layout for all page sections.",
+  "frontend/src/components/site/ServiceIcon.tsx": "Component mapping service IDs to corresponding Lucide icons with hover effects for service cards.",
+  "frontend/src/content/services.ts": "Static data source containing all 7 services with titles, descriptions, taglines, and includes lists with fixed quote escaping.",
+  "frontend/src/content/testimonials.ts": "Static data source containing all client testimonials with names, businesses, and quotes.",
+  "frontend/src/content/contact.ts": "Single source of truth for contact details (email, phone, Instagram URL).",
+  "frontend/src/lib/scrollToSection.ts": "Utility function for smooth scrolling to page sections with offset support for sticky navigation.",
+  "frontend/src/hooks/usePrefersReducedMotion.ts": "Hook detecting user's reduced-motion preference to conditionally disable animations for accessibility.",
+  "frontend/src/hooks/useInViewReveal.ts": "IntersectionObserver-based hook for scroll-triggered reveal animations with threshold, delay, and reduced-motion support.",
+  "frontend/src/hooks/useParallax.ts": "Hook providing parallax scroll offset for subtle background movement effects with reduced-motion support.",
+  "frontend/src/hooks/useQueries.ts": "Empty file as this static marketing website requires no backend data fetching.",
+  "frontend/src/index.css": "Global styles with OKLCH color system defining brand colors (navy and blue from logo), light/dark mode tokens, and animation utilities.",
+  "frontend/tailwind.config.js": "Tailwind configuration extending theme with brand colors, custom font family, and design tokens matching the One Dot Digital brand.",
+  "frontend/src/lib/utils.ts": "Utility function combining clsx and tailwind-merge for conditional className composition."
+}

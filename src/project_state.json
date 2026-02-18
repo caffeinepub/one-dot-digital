@@ -1,0 +1,131 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "Build a marketing agency website for One Dot Digital including Home, About Us, Services, Testimonials, and Contact pages, using the provided logo and contact details, with mixed scroll-based animations and related imagery.",
+  "architectural_notes": [
+    "Site should include global footer repeating contact details (email, phone, Instagram).",
+    "Branding: use provided logo in header and also featured in homepage hero area.",
+    "Animations: use a mix of scroll-triggered effects (parallax/reveal/element movement) especially for Home/About and Services sections."
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "imageRequirements": "## Required Images\n- Abstract digital marketing hero background with subtle grid/analytics motifs (hero-bg.dim_1920x1080.png)\n- Set of 7 minimalist service icons in a cohesive style (services-icons-sprite.dim_1024x1024.png)\n- Soft geometric section divider/shape graphic (section-shapes.dim_1600x400.png)",
+  "existing_features": [
+    {
+      "id": "feature-create-a-responsive-multi-section-marketing-website-for-the-one-dot-digital-brand-with-these-primary-sections-pages-home-about-us-services-testimonials-and-contact-us-and-add-a-top-navigation-that-can-jump-scroll-to-each-section-and-a-footer-that-repeats-the-key-navigation",
+      "title": "Create a responsive multi-section marketing website for the One Dot Digital brand with these primary sections/pages: Home, About Us, Services, Testimonials, and Contact Us, and add a top navigation that can jump/scroll to each section and a footer that repeats the key navigation.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-cohesive-visual-theme-for-one-dot-digital-that-is-consistent-across-all-sections-colors-typography-spacing-component-style-using-the-uploaded-brand-image-as-the-primary-brand-mark-and-choosing-complementary-accent-colors-avoid-a-default-blue-purple-gradient-look-unless-it-matches-the-uploaded-brand-styling",
+      "title": "Implement a cohesive visual theme for One Dot Digital that is consistent across all sections (colors, typography, spacing, component style), using the uploaded brand image as the primary brand mark and choosing complementary accent colors (avoid a default blue+purple gradient look unless it matches the uploaded brand styling).",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-use-the-uploaded-image-file-add-a-heading-jpeg-as-the-one-dot-digital-logo-brand-visual-in-the-website-header-and-also-feature-it-in-the-homepage-hero-area-e-g-as-a-hero-graphic-or-prominent-brand-element-ensuring-it-renders-crisply-on-retina-screens",
+      "title": "Use the uploaded image file \"Add a heading.jpeg\" as the One Dot Digital logo/brand visual in the website header and also feature it in the homepage hero area (e.g., as a hero graphic or prominent brand element), ensuring it renders crisply on retina screens.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-mixed-scroll-based-animations-option-d-a-mix-to-the-home-about-and-services-areas-combining-section-reveal-fade-slide-subtle-parallax-movement-and-service-card-hover-interactions-while-keeping-performance-smooth-and-motion-tasteful",
+      "title": "Add mixed scroll-based animations (option D: a mix) to the Home/About and Services areas, combining section reveal (fade/slide), subtle parallax movement, and service-card hover/interactions while keeping performance smooth and motion tasteful.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-the-about-us-content-using-the-provided-copy-under-who-are-we-and-present-it-in-a-polished-layout-e-g-split-layout-with-text-visual-and-or-values-highlights-while-preserving-the-exact-meaning-and-tone",
+      "title": "Implement the About Us content using the provided copy under “Who Are We?” and present it in a polished layout (e.g., split layout with text + visual, and/or values/highlights) while preserving the exact meaning and tone.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-the-services-section-with-all-7-services-and-their-includes-sublists-exactly-as-provided-using-a-card-grid-layout-and-clear-scannability",
+      "title": "Implement the Services section with all 7 services and their “Includes” sublists exactly as provided, using a card/grid layout and clear scannability.",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-testimonials-section-containing-all-provided-testimonials-with-the-person-name-and-associated-business-descriptor-presented-in-a-carousel-or-grid-ensuring-readability-and-consistent-formatting",
+      "title": "Implement a Testimonials section containing all provided testimonials with the person name and associated business/descriptor, presented in a carousel or grid, ensuring readability and consistent formatting.",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-contact-us-section-page-that-displays-the-provided-email-phone-number-and-instagram-link-and-include-the-same-contact-details-in-the-website-footer-with-clickable-actions-mailto-tel-external-link",
+      "title": "Implement a Contact Us section/page that displays the provided email, phone number, and Instagram link, and include the same contact details in the website footer with clickable actions (mailto, tel, external link).",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-relevant-visually-consistent-marketing-themed-imagery-beyond-the-logo-e-g-abstract-digital-analytics-visuals-to-support-the-hero-and-section-transitions-using-locally-stored-static-assets-no-backend-image-serving",
+      "title": "Add relevant, visually consistent marketing-themed imagery beyond the logo (e.g., abstract digital/analytics visuals) to support the hero and section transitions, using locally stored static assets (no backend image serving).",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-basic-on-page-polish-for-a-professional-agency-site-consistent-section-headings-clear-primary-cta-and-a-simple-loading-free-static-experience-no-internet-identity-or-user-accounts",
+      "title": "Add basic on-page polish for a professional agency site: consistent section headings, clear primary CTA, and a simple loading-free static experience (no Internet Identity or user accounts).",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Create One Dot Digital website with pages/sections: Home, About Us, Services, Testimonials, Contact",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Implement mixed scroll-based animations on Home/About and Services sections (option D mix)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Add Contact details (email, phone, Instagram) to both Contact page and footer",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Use provided logo for branding: show in header and as hero image; include other relevant images as needed",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Include provided services list (7 services with 'Includes' sublists) and testimonials content",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "One Dot Digital",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

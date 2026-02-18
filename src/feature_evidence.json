@@ -1,0 +1,208 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-create-a-responsive-multi-section-marketing-website-for-the-one-dot-digital-brand-with-these-primary-sections-pages-home-about-us-services-testimonials-and-contact-us-and-add-a-top-navigation-that-can-jump-scroll-to-each-section-and-a-footer-that-repeats-the-key-navigation",
+      "featureTitle": "Create a responsive multi-section marketing website for the One Dot Digital brand with these primary sections/pages: Home, About Us, Services, Testimonials, and Contact Us, and add a top navigation that can jump/scroll to each section and a footer that repeats the key navigation.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/site/Footer.tsx",
+        "frontend/src/components/site/TopNav.tsx",
+        "frontend/src/lib/scrollToSection.ts"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-a-cohesive-visual-theme-for-one-dot-digital-that-is-consistent-across-all-sections-colors-typography-spacing-component-style-using-the-uploaded-brand-image-as-the-primary-brand-mark-and-choosing-complementary-accent-colors-avoid-a-default-blue-purple-gradient-look-unless-it-matches-the-uploaded-brand-styling",
+      "featureTitle": "Implement a cohesive visual theme for One Dot Digital that is consistent across all sections (colors, typography, spacing, component style), using the uploaded brand image as the primary brand mark and choosing complementary accent colors (avoid a default blue+purple gradient look unless it matches the uploaded brand styling).",
+      "files": [
+        "frontend/src/components/site/SectionShell.tsx",
+        "frontend/src/index.css",
+        "frontend/tailwind.config.js"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-use-the-uploaded-image-file-add-a-heading-jpeg-as-the-one-dot-digital-logo-brand-visual-in-the-website-header-and-also-feature-it-in-the-homepage-hero-area-e-g-as-a-hero-graphic-or-prominent-brand-element-ensuring-it-renders-crisply-on-retina-screens",
+      "featureTitle": "Use the uploaded image file \"Add a heading.jpeg\" as the One Dot Digital logo/brand visual in the website header and also feature it in the homepage hero area (e.g., as a hero graphic or prominent brand element), ensuring it renders crisply on retina screens.",
+      "files": [
+        "frontend/src/components/sections/HeroSection.tsx",
+        "frontend/src/components/site/TopNav.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-mixed-scroll-based-animations-option-d-a-mix-to-the-home-about-and-services-areas-combining-section-reveal-fade-slide-subtle-parallax-movement-and-service-card-hover-interactions-while-keeping-performance-smooth-and-motion-tasteful",
+      "featureTitle": "Add mixed scroll-based animations (option D: a mix) to the Home/About and Services areas, combining section reveal (fade/slide), subtle parallax movement, and service-card hover/interactions while keeping performance smooth and motion tasteful.",
+      "files": [
+        "frontend/src/components/sections/AboutSection.tsx",
+        "frontend/src/components/sections/HeroSection.tsx",
+        "frontend/src/components/sections/ServicesSection.tsx",
+        "frontend/src/hooks/useInViewReveal.ts",
+        "frontend/src/hooks/useParallax.ts",
+        "frontend/src/hooks/usePrefersReducedMotion.ts",
+        "frontend/src/index.css"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-4"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-the-about-us-content-using-the-provided-copy-under-who-are-we-and-present-it-in-a-polished-layout-e-g-split-layout-with-text-visual-and-or-values-highlights-while-preserving-the-exact-meaning-and-tone",
+      "featureTitle": "Implement the About Us content using the provided copy under “Who Are We?” and present it in a polished layout (e.g., split layout with text + visual, and/or values/highlights) while preserving the exact meaning and tone.",
+      "files": [
+        "frontend/src/components/sections/AboutSection.tsx",
+        "frontend/src/components/site/SectionShell.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-5"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-the-services-section-with-all-7-services-and-their-includes-sublists-exactly-as-provided-using-a-card-grid-layout-and-clear-scannability",
+      "featureTitle": "Implement the Services section with all 7 services and their “Includes” sublists exactly as provided, using a card/grid layout and clear scannability.",
+      "files": [
+        "frontend/src/components/sections/ServicesSection.tsx",
+        "frontend/src/components/site/ServiceIcon.tsx",
+        "frontend/src/content/services.ts"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-6"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-a-testimonials-section-containing-all-provided-testimonials-with-the-person-name-and-associated-business-descriptor-presented-in-a-carousel-or-grid-ensuring-readability-and-consistent-formatting",
+      "featureTitle": "Implement a Testimonials section containing all provided testimonials with the person name and associated business/descriptor, presented in a carousel or grid, ensuring readability and consistent formatting.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/sections/TestimonialsSection.tsx",
+        "frontend/src/content/testimonials.ts"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-7"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-a-contact-us-section-page-that-displays-the-provided-email-phone-number-and-instagram-link-and-include-the-same-contact-details-in-the-website-footer-with-clickable-actions-mailto-tel-external-link",
+      "featureTitle": "Implement a Contact Us section/page that displays the provided email, phone number, and Instagram link, and include the same contact details in the website footer with clickable actions (mailto, tel, external link).",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/sections/ContactSection.tsx",
+        "frontend/src/components/site/Footer.tsx",
+        "frontend/src/content/contact.ts"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-8"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-relevant-visually-consistent-marketing-themed-imagery-beyond-the-logo-e-g-abstract-digital-analytics-visuals-to-support-the-hero-and-section-transitions-using-locally-stored-static-assets-no-backend-image-serving",
+      "featureTitle": "Add relevant, visually consistent marketing-themed imagery beyond the logo (e.g., abstract digital/analytics visuals) to support the hero and section transitions, using locally stored static assets (no backend image serving).",
+      "files": [
+        "frontend/src/components/sections/HeroSection.tsx",
+        "frontend/src/components/sections/ServicesSection.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-9"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-basic-on-page-polish-for-a-professional-agency-site-consistent-section-headings-clear-primary-cta-and-a-simple-loading-free-static-experience-no-internet-identity-or-user-accounts",
+      "featureTitle": "Add basic on-page polish for a professional agency site: consistent section headings, clear primary CTA, and a simple loading-free static experience (no Internet Identity or user accounts).",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/sections/HeroSection.tsx",
+        "frontend/src/components/site/SectionShell.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-10"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

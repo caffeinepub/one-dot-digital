@@ -1,0 +1,75 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-18T14:04:07.539Z",
+  "summary": "Core single-page marketing site structure is implemented (TopNav + sections + Footer), with scroll navigation, a hero CTA, reveal/parallax animations with reduced-motion handling, services/testimonials/contact content sourced from local content modules, and the provided logo file referenced in header/hero/footer. However, some BuildRequest-required image assets are not evidenced as used, and there is unrequested footer attribution/back-end scaffolding.",
+  "missing_requirements": [
+    {
+      "id": "REQ-6",
+      "requirement": "Use the provided set of 7 minimalist service icons (services-icons-sprite.dim_1024x1024.png) for the Services section in a cohesive style.",
+      "reason": "Services icons are implemented via lucide-react icons mapped in ServiceIcon, with no evidence of using the required local sprite asset.",
+      "evidence": [
+        "frontend/src/components/site/ServiceIcon.tsx",
+        "frontend/src/components/sections/ServicesSection.tsx"
+      ]
+    },
+    {
+      "id": "REQ-9",
+      "requirement": "Use the provided soft geometric section divider/shape graphic (section-shapes.dim_1600x400.png) to support section transitions/backgrounds using local static assets.",
+      "reason": "Only the hero background image is referenced; there is no evidence that the required section divider/shape asset is present or used anywhere in the shown files.",
+      "evidence": [
+        "frontend/src/components/sections/HeroSection.tsx",
+        "frontend/src/components/site/SectionShell.tsx"
+      ]
+    }
+  ],
+  "hallucinated_features": [
+    {
+      "description": "Footer includes a 'Built with ❤️ using caffeine.ai' promotional attribution link.",
+      "reason": "Not requested in the BuildRequest requirements or acceptance criteria.",
+      "evidence": [
+        "frontend/src/components/site/Footer.tsx"
+      ]
+    },
+    {
+      "description": "Backend canister stub added (empty actor).",
+      "reason": "BuildRequest is for a loading-free static marketing site with no backend CMS/database; adding backend scaffolding was not requested.",
+      "evidence": [
+        "backend/main.mo"
+      ]
+    }
+  ],
+  "confidence": 0.62,
+  "changed_files": [
+    "all_files_summary.json",
+    "backend/main.mo",
+    "frontend-file-summaries.txt",
+    "frontend/index.css",
+    "frontend/index.html",
+    "frontend/src/App.tsx",
+    "frontend/src/components/sections/AboutSection.tsx",
+    "frontend/src/components/sections/ContactSection.tsx",
+    "frontend/src/components/sections/HeroSection.tsx",
+    "frontend/src/components/sections/ServicesSection.tsx",
+    "frontend/src/components/sections/TestimonialsSection.tsx",
+    "frontend/src/components/site/Footer.tsx",
+    "frontend/src/components/site/SectionShell.tsx",
+    "frontend/src/components/site/ServiceIcon.tsx",
+    "frontend/src/components/site/TopNav.tsx",
+    "frontend/src/content/contact.ts",
+    "frontend/src/content/services.ts",
+    "frontend/src/content/testimonials.ts",
+    "frontend/src/hooks/useActor.ts",
+    "frontend/src/hooks/useInViewReveal.ts",
+    "frontend/src/hooks/useInternetIdentity.ts",
+    "frontend/src/hooks/useParallax.ts",
+    "frontend/src/hooks/usePrefersReducedMotion.ts",
+    "frontend/src/hooks/useQueries.ts",
+    "frontend/src/index.css",
+    "frontend/src/lib/scrollToSection.ts",
+    "frontend/src/lib/utils.ts",
+    "frontend/src/main.tsx",
+    "frontend/tailwind.config.js",
+    "project_state.json"
+  ]
+}

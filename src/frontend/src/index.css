@@ -1,0 +1,117 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --radius: 0.625rem;
+        
+        /* Brand Colors - Navy and Blue from logo */
+        --brand-navy: 0.145 0.08 250;
+        --brand-blue: 0.62 0.15 230;
+        
+        /* Light Mode */
+        --background: 1 0 0;
+        --foreground: 0.145 0.08 250;
+        --card: 1 0 0;
+        --card-foreground: 0.145 0.08 250;
+        --popover: 1 0 0;
+        --popover-foreground: 0.145 0.08 250;
+        --primary: 0.145 0.08 250;
+        --primary-foreground: 0.985 0 0;
+        --secondary: 0.62 0.15 230;
+        --secondary-foreground: 0.985 0 0;
+        --muted: 0.96 0.01 250;
+        --muted-foreground: 0.45 0.03 250;
+        --accent: 0.62 0.15 230;
+        --accent-foreground: 0.985 0 0;
+        --destructive: 0.577 0.245 27.325;
+        --destructive-foreground: 0.985 0 0;
+        --border: 0.92 0.01 250;
+        --input: 0.92 0.01 250;
+        --ring: 0.62 0.15 230;
+        --chart-1: 0.62 0.15 230;
+        --chart-2: 0.145 0.08 250;
+        --chart-3: 0.5 0.12 200;
+        --chart-4: 0.7 0.18 260;
+        --chart-5: 0.4 0.1 240;
+    }
+
+    .dark {
+        --background: 0.145 0.08 250;
+        --foreground: 0.985 0 0;
+        --card: 0.18 0.08 250;
+        --card-foreground: 0.985 0 0;
+        --popover: 0.18 0.08 250;
+        --popover-foreground: 0.985 0 0;
+        --primary: 0.62 0.15 230;
+        --primary-foreground: 0.145 0.08 250;
+        --secondary: 0.25 0.08 250;
+        --secondary-foreground: 0.985 0 0;
+        --muted: 0.25 0.08 250;
+        --muted-foreground: 0.7 0.05 250;
+        --accent: 0.62 0.15 230;
+        --accent-foreground: 0.985 0 0;
+        --destructive: 0.704 0.191 22.216;
+        --destructive-foreground: 0.985 0 0;
+        --border: 0.3 0.08 250;
+        --input: 0.3 0.08 250;
+        --ring: 0.62 0.15 230;
+        --chart-1: 0.62 0.15 230;
+        --chart-2: 0.5 0.12 200;
+        --chart-3: 0.7 0.18 260;
+        --chart-4: 0.4 0.1 240;
+        --chart-5: 0.8 0.2 220;
+    }
+
+    * {
+        @apply border-border;
+    }
+    
+    body {
+        @apply bg-background text-foreground;
+        font-feature-settings: "rlig" 1, "calt" 1;
+    }
+    
+    html {
+        scroll-behavior: smooth;
+    }
+}
+
+@layer utilities {
+    .text-brand-navy {
+        color: oklch(var(--brand-navy));
+    }
+    
+    .text-brand-blue {
+        color: oklch(var(--brand-blue));
+    }
+    
+    .bg-brand-navy {
+        background-color: oklch(var(--brand-navy));
+    }
+    
+    .bg-brand-blue {
+        background-color: oklch(var(--brand-blue));
+    }
+    
+    .border-brand-navy {
+        border-color: oklch(var(--brand-navy));
+    }
+    
+    .border-brand-blue {
+        border-color: oklch(var(--brand-blue));
+    }
+}
+
+/* Animation utilities */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
