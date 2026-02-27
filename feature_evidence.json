@@ -1,0 +1,25 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-replace-the-current-logo-image-used-in-the-topnav-herosection-and-footer-with-the-newly-generated-onedot-digital-logo-asset-onedot-digital-logo-dim-400x200-png-stored-in-frontend-public-assets-generated",
+      "featureTitle": "Replace the current logo image used in the TopNav, HeroSection, and Footer with the newly generated ONEDOT DIGITAL logo asset (onedot-digital-logo.dim_400x200.png) stored in frontend/public/assets/generated.",
+      "files": [
+        "frontend/src/components/sections/HeroSection.tsx",
+        "frontend/src/components/site/Footer.tsx",
+        "frontend/src/components/site/TopNav.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Replace site logo with ONEDOT DIGITAL brand image",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Replace the current logo image in TopNav, HeroSection, and Footer with the newly generated ONEDOT DIGITAL logo asset from frontend/public/assets/generated/onedot-digital-logo.dim_400x200.png",
+      "acceptanceCriteria": [
+        "The ONEDOT DIGITAL logo (dark navy 'ONEDOT' with blue circle accent on the 'O' in DOT, and grey 'DIGITAL' below) is visible in the top navigation bar.",
+        "The same logo appears in the HeroSection.",
+        "The same logo appears in the Footer.",
+        "No broken image placeholders or old logo references remain anywhere on the page.",
+        "The logo image is loaded from frontend/public/assets/generated/onedot-digital-logo.dim_400x200.png."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/site/TopNav.tsx",
+          "operation": "modify",
+          "description": "Update the logo image source to use the generated ONEDOT DIGITAL logo at frontend/public/assets/generated/onedot-digital-logo.dim_400x200.png. Replace any existing logo image or placeholder with an <img> tag that references the new asset path. Ensure the logo has appropriate alt text ('ONEDOT DIGITAL') and sizing for the navigation bar."
+        },
+        {
+          "path": "frontend/src/components/sections/HeroSection.tsx",
+          "operation": "modify",
+          "description": "Update the brand logo in the hero section to use the generated ONEDOT DIGITAL logo at frontend/public/assets/generated/onedot-digital-logo.dim_400x200.png. Replace any existing logo image or placeholder with an <img> tag that references the new asset path. Ensure the logo has appropriate alt text ('ONEDOT DIGITAL') and sizing for the hero section."
+        },
+        {
+          "path": "frontend/src/components/site/Footer.tsx",
+          "operation": "modify",
+          "description": "Update the brand logo in the footer to use the generated ONEDOT DIGITAL logo at frontend/public/assets/generated/onedot-digital-logo.dim_400x200.png. Replace any existing logo image or placeholder with an <img> tag that references the new asset path. Ensure the logo has appropriate alt text ('ONEDOT DIGITAL') and sizing for the footer."
+        }
+      ]
+    }
+  ]
+}

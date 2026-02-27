@@ -1,0 +1,44 @@
+{
+  "kind": "build_request",
+  "title": "Replace site logo with uploaded ONEDOT DIGITAL brand image",
+  "projectName": "One Dot Digital",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Replace the current logo image used in the TopNav, HeroSection, and Footer with the newly generated ONEDOT DIGITAL logo asset (onedot-digital-logo.dim_400x200.png) stored in frontend/public/assets/generated.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-recent"
+        ],
+        "quotes": [
+          "Apply the change with this same image in the draft",
+          "Build"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The ONEDOT DIGITAL logo (dark navy 'ONEDOT' with blue circle accent on the 'O' in DOT, and grey 'DIGITAL' below) is visible in the top navigation bar.",
+        "The same logo appears in the HeroSection.",
+        "The same logo appears in the Footer.",
+        "No broken image placeholders or old logo references remain anywhere on the page.",
+        "The logo image is loaded from frontend/public/assets/generated/onedot-digital-logo.dim_400x200.png."
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not alter any layout, color scheme, or other visual elements beyond swapping the logo image.",
+    "Do not modify any files under frontend/src/hooks/ or frontend/src/components/ui."
+  ],
+  "nonGoals": [
+    "Redesigning any page sections.",
+    "Changing typography, color tokens, or animations.",
+    "Any backend changes."
+  ],
+  "imageRequirements": {
+    "required": [
+      "ONEDOT DIGITAL wordmark logo on a transparent background: bold dark navy uppercase 'ONEDOT' text where the 'O' in DOT is replaced by a blue circle ring accent, with 'DIGITAL' in medium-weight grey beneath it (onedot-digital-logo.dim_400x200.png)"
+    ],
+    "edits": []
+  }
+}
