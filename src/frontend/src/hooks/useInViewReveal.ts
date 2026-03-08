@@ -1,5 +1,5 @@
-import { useEffect, useRef, useState } from 'react';
-import { usePrefersReducedMotion } from './usePrefersReducedMotion';
+import { useEffect, useRef, useState } from "react";
+import { usePrefersReducedMotion } from "./usePrefersReducedMotion";
 
 interface UseInViewRevealOptions {
   threshold?: number;
@@ -26,7 +26,7 @@ export function useInViewReveal(options: UseInViewRevealOptions = {}) {
           }, delay);
         }
       },
-      { threshold }
+      { threshold },
     );
 
     const currentRef = ref.current;

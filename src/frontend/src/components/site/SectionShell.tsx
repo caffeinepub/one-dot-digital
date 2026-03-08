@@ -1,5 +1,5 @@
-import { ReactNode } from 'react';
-import { cn } from '@/lib/utils';
+import { cn } from "@/lib/utils";
+import type { ReactNode } from "react";
 
 interface SectionShellProps {
   id: string;
@@ -7,12 +7,13 @@ interface SectionShellProps {
   className?: string;
 }
 
-export default function SectionShell({ id, children, className }: SectionShellProps) {
+export default function SectionShell({
+  id,
+  children,
+  className,
+}: SectionShellProps) {
   return (
-    <section
-      id={id}
-      className={cn('py-20 md:py-32 scroll-mt-20', className)}
-    >
+    <section id={id} className={cn("py-20 md:py-32 scroll-mt-20", className)}>
       <div className="container mx-auto px-4">{children}</div>
     </section>
   );

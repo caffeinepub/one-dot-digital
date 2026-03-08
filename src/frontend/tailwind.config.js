@@ -56,8 +56,12 @@ export default {
                     4: 'oklch(var(--chart-4))',
                     5: 'oklch(var(--chart-5))'
                 },
-                'brand-navy': 'oklch(var(--brand-navy))',
-                'brand-blue': 'oklch(var(--brand-blue))'
+                'brand-navy': 'oklch(0.18 0.08 250)',
+                'brand-blue': 'oklch(0.42 0.18 230)',
+                'navy-dark': 'oklch(0.18 0.08 250)',
+                'navy-medium': 'oklch(0.24 0.07 250)',
+                'blue-light': 'oklch(0.52 0.18 230)',
+                'off-white': 'oklch(0.96 0.01 250)',
             },
             borderRadius: {
                 lg: 'var(--radius)',

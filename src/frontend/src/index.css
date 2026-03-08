@@ -3,115 +3,208 @@
 @tailwind utilities;
 
 @layer base {
-    :root {
-        --radius: 0.625rem;
-        
-        /* Brand Colors - Navy and Blue from logo */
-        --brand-navy: 0.145 0.08 250;
-        --brand-blue: 0.62 0.15 230;
-        
-        /* Light Mode */
-        --background: 1 0 0;
-        --foreground: 0.145 0.08 250;
-        --card: 1 0 0;
-        --card-foreground: 0.145 0.08 250;
-        --popover: 1 0 0;
-        --popover-foreground: 0.145 0.08 250;
-        --primary: 0.145 0.08 250;
-        --primary-foreground: 0.985 0 0;
-        --secondary: 0.62 0.15 230;
-        --secondary-foreground: 0.985 0 0;
-        --muted: 0.96 0.01 250;
-        --muted-foreground: 0.45 0.03 250;
-        --accent: 0.62 0.15 230;
-        --accent-foreground: 0.985 0 0;
-        --destructive: 0.577 0.245 27.325;
-        --destructive-foreground: 0.985 0 0;
-        --border: 0.92 0.01 250;
-        --input: 0.92 0.01 250;
-        --ring: 0.62 0.15 230;
-        --chart-1: 0.62 0.15 230;
-        --chart-2: 0.145 0.08 250;
-        --chart-3: 0.5 0.12 200;
-        --chart-4: 0.7 0.18 260;
-        --chart-5: 0.4 0.1 240;
-    }
+  :root {
+    --radius: 0.625rem;
 
-    .dark {
-        --background: 0.145 0.08 250;
-        --foreground: 0.985 0 0;
-        --card: 0.18 0.08 250;
-        --card-foreground: 0.985 0 0;
-        --popover: 0.18 0.08 250;
-        --popover-foreground: 0.985 0 0;
-        --primary: 0.62 0.15 230;
-        --primary-foreground: 0.145 0.08 250;
-        --secondary: 0.25 0.08 250;
-        --secondary-foreground: 0.985 0 0;
-        --muted: 0.25 0.08 250;
-        --muted-foreground: 0.7 0.05 250;
-        --accent: 0.62 0.15 230;
-        --accent-foreground: 0.985 0 0;
-        --destructive: 0.704 0.191 22.216;
-        --destructive-foreground: 0.985 0 0;
-        --border: 0.3 0.08 250;
-        --input: 0.3 0.08 250;
-        --ring: 0.62 0.15 230;
-        --chart-1: 0.62 0.15 230;
-        --chart-2: 0.5 0.12 200;
-        --chart-3: 0.7 0.18 260;
-        --chart-4: 0.4 0.1 240;
-        --chart-5: 0.8 0.2 220;
-    }
+    /* Brand Colors — Light Blue Gradient Theme */
+    --navy-dark: 0.22 0.1 255;
+    --navy-medium: 0.3 0.09 250;
+    --blue-light: 0.55 0.16 228;
+    --off-white: 0.97 0.005 240;
 
-    * {
-        @apply border-border;
-    }
-    
-    body {
-        @apply bg-background text-foreground;
-        font-feature-settings: "rlig" 1, "calt" 1;
-    }
-    
-    html {
-        scroll-behavior: smooth;
-    }
+    /* Light Blue Gradient Theme */
+    --background: 0.97 0.012 235;
+    --foreground: 0.2 0.1 258;
+    --card: 0.99 0.005 230;
+    --card-foreground: 0.2 0.1 258;
+    --popover: 0.99 0.005 230;
+    --popover-foreground: 0.2 0.1 258;
+    --primary: 0.38 0.14 240;
+    --primary-foreground: 0.99 0 0;
+    --secondary: 0.93 0.025 228;
+    --secondary-foreground: 0.22 0.1 258;
+    --muted: 0.91 0.02 230;
+    --muted-foreground: 0.46 0.07 255;
+    --accent: 0.5 0.16 228;
+    --accent-foreground: 0.99 0 0;
+    --destructive: 0.577 0.245 27.325;
+    --destructive-foreground: 0.99 0 0;
+    --border: 0.88 0.025 228;
+    --input: 0.88 0.025 228;
+    --ring: 0.38 0.14 240;
+    --chart-1: 0.38 0.14 240;
+    --chart-2: 0.5 0.12 200;
+    --chart-3: 0.55 0.18 260;
+    --chart-4: 0.4 0.1 240;
+    --chart-5: 0.65 0.2 220;
+  }
+
+  .dark {
+    --background: 0.18 0.08 250;
+    --foreground: 0.96 0.01 250;
+    --card: 0.24 0.07 250;
+    --card-foreground: 0.96 0.01 250;
+    --popover: 0.24 0.07 250;
+    --popover-foreground: 0.96 0.01 250;
+    --primary: 0.55 0.18 230;
+    --primary-foreground: 0.18 0.08 250;
+    --secondary: 0.3 0.07 250;
+    --secondary-foreground: 0.96 0.01 250;
+    --muted: 0.3 0.07 250;
+    --muted-foreground: 0.7 0.05 250;
+    --accent: 0.55 0.18 230;
+    --accent-foreground: 0.96 0.01 250;
+    --destructive: 0.704 0.191 22.216;
+    --destructive-foreground: 0.96 0.01 250;
+    --border: 0.32 0.07 250;
+    --input: 0.32 0.07 250;
+    --ring: 0.55 0.18 230;
+    --chart-1: 0.55 0.18 230;
+    --chart-2: 0.5 0.12 200;
+    --chart-3: 0.65 0.18 260;
+    --chart-4: 0.4 0.1 240;
+    --chart-5: 0.75 0.2 220;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Headings use brand navy */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: oklch(var(--foreground));
+  }
 }
 
 @layer utilities {
-    .text-brand-navy {
-        color: oklch(var(--brand-navy));
-    }
-    
-    .text-brand-blue {
-        color: oklch(var(--brand-blue));
-    }
-    
-    .bg-brand-navy {
-        background-color: oklch(var(--brand-navy));
-    }
-    
-    .bg-brand-blue {
-        background-color: oklch(var(--brand-blue));
-    }
-    
-    .border-brand-navy {
-        border-color: oklch(var(--brand-navy));
-    }
-    
-    .border-brand-blue {
-        border-color: oklch(var(--brand-blue));
-    }
+  .text-navy-dark {
+    color: oklch(var(--navy-dark));
+  }
+
+  .text-blue-light {
+    color: oklch(var(--blue-light));
+  }
+
+  .text-off-white {
+    color: oklch(var(--off-white));
+  }
+
+  .bg-navy-dark {
+    background-color: oklch(var(--navy-dark));
+  }
+
+  .bg-navy-medium {
+    background-color: oklch(var(--navy-medium));
+  }
+
+  .bg-blue-light {
+    background-color: oklch(var(--blue-light));
+  }
+}
+
+/* Flip card animation */
+@keyframes flip {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(180deg);
+  }
+}
+
+.flip-card {
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+}
+
+/* Wavy background animation */
+@keyframes wave {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+  50% {
+    transform: translateX(-25%) translateY(-5%);
+  }
+  100% {
+    transform: translateX(0) translateY(0);
+  }
+}
+
+@keyframes wave-reverse {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+  50% {
+    transform: translateX(25%) translateY(5%);
+  }
+  100% {
+    transform: translateX(0) translateY(0);
+  }
+}
+
+.wave-animate {
+  animation: wave 20s ease-in-out infinite;
+}
+
+.wave-animate-reverse {
+  animation: wave-reverse 15s ease-in-out infinite;
 }
 
 /* Animation utilities */
 @media (prefers-reduced-motion: reduce) {
-    *,
-    *::before,
-    *::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-        scroll-behavior: auto !important;
-    }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .flip-card:hover .flip-card-inner {
+    transform: none;
+  }
+
+  .wave-animate,
+  .wave-animate-reverse {
+    animation: none;
+  }
 }

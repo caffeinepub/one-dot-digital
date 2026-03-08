@@ -1,12 +1,12 @@
 import {
-  TrendingUp,
+  FileText,
+  Globe,
+  Megaphone,
+  Palette,
   Search,
   Share2,
-  Globe,
-  Palette,
-  Megaphone,
-  FileText,
-} from 'lucide-react';
+  TrendingUp,
+} from "lucide-react";
 
 interface ServiceIconProps {
   serviceId: string;
@@ -14,13 +14,13 @@ interface ServiceIconProps {
 
 export default function ServiceIcon({ serviceId }: ServiceIconProps) {
   const iconMap: Record<string, React.ElementType> = {
-    'performance-marketing': TrendingUp,
-    'seo-services': Search,
-    'social-media-marketing': Share2,
-    'website-development': Globe,
-    'graphic-designing': Palette,
-    'branding-awareness': Megaphone,
-    'content-writing': FileText,
+    "performance-marketing": TrendingUp,
+    "seo-services": Search,
+    "social-media-marketing": Share2,
+    "website-development": Globe,
+    "graphic-designing": Palette,
+    "branding-awareness": Megaphone,
+    "content-writing": FileText,
   };
 
   const Icon = iconMap[serviceId] || Globe;

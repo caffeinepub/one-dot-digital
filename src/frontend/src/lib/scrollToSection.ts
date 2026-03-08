@@ -1,4 +1,4 @@
-export function scrollToSection(id: string, offset: number = 80) {
+export function scrollToSection(id: string, offset = 80) {
   const element = document.getElementById(id);
   if (element) {
     const elementPosition = element.getBoundingClientRect().top;
@@ -6,7 +6,7 @@ export function scrollToSection(id: string, offset: number = 80) {
 
     window.scrollTo({
       top: offsetPosition,
-      behavior: 'smooth',
+      behavior: "smooth",
     });
   }
 }

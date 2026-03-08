@@ -1,33 +1,33 @@
-import { Mail, Phone } from 'lucide-react';
-import { SiInstagram } from 'react-icons/si';
-import { Separator } from '@/components/ui/separator';
-import { scrollToSection } from '@/lib/scrollToSection';
-import { contactDetails } from '@/content/contact';
+import { Separator } from "@/components/ui/separator";
+import { contactDetails } from "@/content/contact";
+import { scrollToSection } from "@/lib/scrollToSection";
+import { Mail, Phone } from "lucide-react";
+import { SiInstagram } from "react-icons/si";
 
 export default function Footer() {
   const navLinks = [
-    { label: 'Home', id: 'home' },
-    { label: 'About Us', id: 'about' },
-    { label: 'Services', id: 'services' },
-    { label: 'Testimonials', id: 'testimonials' },
-    { label: 'Contact', id: 'contact' },
+    { label: "Home", id: "home" },
+    { label: "About Us", id: "about" },
+    { label: "Services", id: "services" },
+    { label: "Testimonials", id: "testimonials" },
+    { label: "Contact", id: "contact" },
   ];
 
   const currentYear = new Date().getFullYear();
   const appIdentifier = encodeURIComponent(
-    typeof window !== 'undefined' ? window.location.hostname : 'onedot-digital'
+    typeof window !== "undefined" ? window.location.hostname : "onedot-digital",
   );
 
   return (
-    <footer className="bg-card border-t border-border">
+    <footer className="bg-secondary/80 border-t border-border">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           {/* Brand */}
           <div>
             <img
-              src="/assets/brand/add-a-heading.jpeg"
-              alt="One Dot Digital"
-              className="h-12 w-auto mb-4"
+              src="/assets/generated/onedot-digital-logo.dim_400x200.png"
+              alt="ONEDOT DIGITAL"
+              className="h-12 w-auto mb-4 object-contain"
             />
             <p className="text-muted-foreground text-sm">
               Transforming businesses into powerful digital identities.
@@ -36,11 +36,14 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h3 className="font-semibold text-lg mb-4">Quick Links</h3>
+            <h3 className="font-semibold text-lg mb-4 text-primary">
+              Quick Links
+            </h3>
             <ul className="space-y-2">
               {navLinks.map((link) => (
                 <li key={link.id}>
                   <button
+                    type="button"
                     onClick={() => scrollToSection(link.id)}
                     className="text-muted-foreground hover:text-primary transition-colors text-sm"
                   >
@@ -53,7 +56,9 @@ export default function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h3 className="font-semibold text-lg mb-4">Contact Us</h3>
+            <h3 className="font-semibold text-lg mb-4 text-primary">
+              Contact Us
+            </h3>
             <ul className="space-y-3">
               <li>
                 <a
@@ -93,7 +98,7 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
           <p>© {currentYear} One Dot Digital. All rights reserved.</p>
           <p>
-            Built with ❤️ using{' '}
+            Built with ❤️ using{" "}
             <a
               href={`https://caffeine.ai/?utm_source=Caffeine-footer&utm_medium=referral&utm_content=${appIdentifier}`}
               target="_blank"
