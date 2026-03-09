@@ -13,7 +13,7 @@ export default function HeroSection() {
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
       style={{
         background:
-          "linear-gradient(135deg, oklch(0.95 0.025 228) 0%, oklch(0.97 0.015 235) 40%, oklch(0.93 0.03 220) 100%)",
+          "linear-gradient(135deg, oklch(0.94 0.028 222) 0%, oklch(0.97 0.014 232) 45%, oklch(0.96 0.018 228) 100%)",
       }}
     >
       {/* Animated Wavy Background */}
@@ -24,7 +24,7 @@ export default function HeroSection() {
         className="absolute inset-0 z-0"
         style={{ transform: `translateY(${parallaxOffset}px)` }}
       >
-        <div className="absolute inset-0 bg-gradient-to-br from-[oklch(0.96_0.02_228)] via-[oklch(0.97_0.012_235)] to-[oklch(0.92_0.035_220)]" />
+        <div className="absolute inset-0 bg-gradient-to-br from-[oklch(0.95_0.024_224)] via-[oklch(0.97_0.014_232)] to-[oklch(0.93_0.030_220)]" />
       </div>
 
       {/* CSS-only floating blob shapes — scattered across hero */}

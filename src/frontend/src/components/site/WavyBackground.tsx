@@ -8,7 +8,7 @@ export default function WavyBackground() {
       {/* Wave layer 1 */}
       <svg
         aria-hidden="true"
-        className={`absolute inset-0 w-[200%] h-full opacity-10 ${!prefersReducedMotion ? "wave-animate" : ""}`}
+        className={`absolute inset-0 w-[200%] h-full opacity-[0.15] ${!prefersReducedMotion ? "wave-animate" : ""}`}
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 1440 320"
         preserveAspectRatio="none"

@@ -80,7 +80,7 @@ function TestimonialCard({
     <div
       ref={ref}
       data-ocid={`testimonials.item.${index + 1}`}
-      className={`group bg-white rounded-2xl border border-border shadow-md hover:-translate-y-2 hover:shadow-xl transition-all duration-300 flex flex-col p-6 ${
+      className={`group bg-card rounded-2xl border border-border shadow-md hover:-translate-y-2 hover:shadow-xl transition-all duration-300 flex flex-col p-6 ${
         isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
       }`}
       style={{
